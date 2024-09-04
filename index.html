@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Book Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Book Library</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('categories')">Categories</a></li>
+                <li><a href="#" onclick="showSection('history')">Borrowing History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <input type="text" id="search" placeholder="Search for books..." oninput="searchBooks()">
+            <div id="book-list"></div>
+        </section>
+
+        <section id="categories" style="display: none;">
+            <h2>Categories</h2>
+            <div id="category-list"></div>
+        </section>
+
+        <section id="history" style="display: none;">
+            <h2>Borrowing History</h2>
+            <div id="history-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Book Library</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
